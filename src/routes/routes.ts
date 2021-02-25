@@ -163,9 +163,7 @@ class Routes {
         const { idActor, serie } = req.params
         await db.conectarBD()
         await Actores.findOneAndDelete(
-            { idActor: idActor,
-            serie: serie
-            }, 
+            { idActor: idActor,serie: serie}, 
             (err: any, doc) => {
                 if(err) console.log(err)
                 else{
@@ -178,7 +176,6 @@ class Routes {
             })
         db.desconectarBD()
     }
-   
 
     misRutas(){
         this._router.get('/series', this.getSeries),

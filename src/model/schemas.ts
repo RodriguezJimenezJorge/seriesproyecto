@@ -12,7 +12,7 @@ const SerieSchema = new Schema({
 
 
 const ActorSchema = new Schema({
-    idActor: Number,
+    idActor: String,
     nombre: String,
     serie: String,
     temporadaAparicion: Number,
